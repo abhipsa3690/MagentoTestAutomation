@@ -45,9 +45,9 @@ public class LoginSteps {
 
     @Then("an error message is displayed")
     public void an_error_message_is_displayed() {
-        String error = loginPage.getErrorMessage();
-        assert error.contains("Invalid login or password.") : "Expected error message not displayed!";
-        System.out.println("Error message displayed: " + error);
+        String errorMessage = loginPage.getErrorMessage();
+        assert errorMessage.contains("Invalid login or password.") : "Expected error message not displayed!";
+        System.out.println("Error message displayed: " + errorMessage);
         driver.quit();
     }
 }
